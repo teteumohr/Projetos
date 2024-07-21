@@ -1,12 +1,10 @@
 package Projetos.Pessoa;
 
 public abstract class Pessoa {
-    // Atributos
     private String nome;
     private int idade;
     private String sexo;
-
-    // Métodos Get e Setter
+    private String funcao;
 
     public String getNome() {
         return nome;
@@ -32,17 +30,20 @@ public abstract class Pessoa {
         this.sexo = sexo;
     }
 
-    // Métodos
+    public String getFuncao() {
+        return funcao;
+    }
+
+    public void setFuncao(String funcao) {
+        this.funcao = funcao;
+    }
+
     public void fazerAniversario() {
         this.idade++;
     }
 
     @Override
     public String toString() {
-        return "Pessoa{" +
-                "nome='" + nome + '\'' +
-                ", idade=" + idade +
-                ", sexo='" + sexo + '\'' +
-                '}';
+        return "Nome: " + nome + "\nIdade: " + idade + "\nSexo: " + sexo + "\nFunção: " + funcao;
     }
 }

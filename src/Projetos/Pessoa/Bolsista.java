@@ -11,7 +11,7 @@ public class Bolsista extends Aluno {
         this.bolsa = bolsa;
     }
 
-    public void RenovarBolsa() {
+    public void renovarBolsa() {
         System.out.println("Renovando bolsa de " + this.getNome());
     }
 
@@ -19,4 +19,11 @@ public class Bolsista extends Aluno {
     public void pagarMensalidade() {
         System.out.println(this.getNome() + " é bolsista! Pagamento realizado!");
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nBolsa: " + bolsa + "%";
+    }
+
+
 }

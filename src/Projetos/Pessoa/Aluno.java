@@ -1,11 +1,9 @@
 package Projetos.Pessoa;
 
-public class Aluno extends Pessoa{
-    // Atributo
+public class Aluno extends Pessoa {
     private int matricula;
     private String curso;
 
-    // Método Get e Setter
     public int getMatricula() {
         return matricula;
     }
@@ -22,8 +20,13 @@ public class Aluno extends Pessoa{
         this.curso = curso;
     }
 
-    // Método
     public void pagarMensalidade() {
         System.out.println("Pagando mensalidade do aluno " + this.getNome());
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nMatrícula: " + matricula + "\nCurso: " + curso;
+    }
+
 }
